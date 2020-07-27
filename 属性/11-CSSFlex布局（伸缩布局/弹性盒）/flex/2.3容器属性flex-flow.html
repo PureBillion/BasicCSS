@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction属性</title>
+    <!-- 1作用：flex-direction属性和flex-wrap属性的简写形式 -->
+
+    <!-- 2：取值：flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。 -->
+
+    <!-- 3：示例 -->
+    <style>
+        .box:nth-of-type(1){
+            flex-flow:row nowrap;
+        }
+        .box:nth-of-type(2){
+            flex-flow:row wrap;
+        }
+        .box:nth-of-type(3){
+            flex-flow:row wrap-reverse;
+        }
+        .box:nth-of-type(4){
+            flex-flow:row-reverse nowrap;
+        }
+        .box:nth-of-type(5){
+            flex-flow:row-reverse wrap;
+        }
+        .box:nth-of-type(6){
+            flex-flow:row-reverse wrap-reverse;
+        }
+        .box:nth-of-type(7){
+            flex-flow:column nowrap;
+        }
+        .box:nth-of-type(8){
+            flex-flow:column wrap;
+        }
+        .box:nth-of-type(9){
+            flex-flow:column wrap-reverse;
+        }
+        .box:nth-of-type(10){
+            flex-flow:column-reverse nowrap;
+        }
+        .box:nth-of-type(11){
+            flex-flow:column-reverse wrap;
+        }
+        .box:nth-of-type(12){
+            flex-flow:column-reverse wrap-reverse;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            border: 1px solid #000;
+            width: 400px;
+            height: 300px;
+
+            display: flex;
+
+            padding: 0;
+        }
+        .box_item{
+            width: 90px;
+            height: 70px;
+            background-color: red;
+
+            font-size: 12px;
+            line-height: 50px;
+            text-align: center;
+
+            list-style: none;
+        }
+        .box_item:nth-of-type(2){
+            background-color: green;
+        }
+        .box_item:nth-of-type(3){
+            background-color: blue;
+        }
+        .box_item:nth-of-type(4){
+            background-color: purple;
+        }
+        .box_item:nth-of-type(5){
+            background-color: pink;
+        }
+        .box_item:nth-of-type(6){
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- ********************************************************************* -->
+    <ul class="box">
+        <li class="box_item">row</li>
+        <li class="box_item">row</li>
+        <li class="box_item">row</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">row</li>
+        <li class="box_item">row</li>
+        <li class="box_item">row</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">row</li>
+        <li class="box_item">row</li>
+        <li class="box_item">row</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+    </ul>
+    <!-- ************************************************************************* -->
+    <ul class="box">
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">row-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+    </ul>
+    <!-- ************************************************************************************************* -->
+    <ul class="box">
+        <li class="box_item">column</li>
+        <li class="box_item">column</li>
+        <li class="box_item">column</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+    </ul> 
+    <ul class="box">
+        <li class="box_item">column</li>
+        <li class="box_item">column</li>
+        <li class="box_item">column</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+    </ul> 
+    <ul class="box">
+        <li class="box_item">column</li>
+        <li class="box_item">column</li>
+        <li class="box_item">column</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+    </ul>
+    <!-- *********************************************************************************************** -->
+    <ul class="box">
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+    </ul> 
+    <ul class="box">
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">column-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+    </ul>
+
+</body>
+</html>

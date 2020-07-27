@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>定位方法创建三列布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left {
+            width: 200px;
+            height: 500px;
+            background-color: yellow;
+            position: absolute;
+            /* 绝对定位，使位置固定 */
+            left: 0;
+            top: 0;
+        }
+
+        .center {
+            height: 600px;
+            background-color: purple;
+            margin: 0 300px 0 200px;
+            /* 通过外边距确定宽度 */
+        }
+
+        .right {
+            width: 300px;
+            height: 500px;
+            background-color: red;
+            position: absolute;
+            /* 绝对定位，使位置固定 */
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="left">Left</div>
+    <div class="center">Center</div>
+    <div class="right">Right</div>
+</body>
+
+</html>

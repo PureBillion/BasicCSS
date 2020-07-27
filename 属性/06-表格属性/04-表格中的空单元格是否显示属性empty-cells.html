@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-表格中的空单元格是否显示：empty-cells</title>
+    <style>
+        /* 表格中的空单元格是否显示：empty-cells */
+
+        /* 取值：1:show(默认)
+                2:hide;
+         */
+        
+        /* 参考链接：https://www.w3school.com.cn/cssref/pr_background-position.asp */
+        table.one {
+            border-collapse: separate;
+            border-spacing: 10px
+        }
+        table.two{
+            border-collapse: separate;
+            border-spacing: 10px 50px;
+            empty-cells: hide;
+        }
+        table tr:nth-of-type(2) td:nth-of-type(2){
+            color: #c00;
+        }
+    </style>
+</head>
+<body>
+    <table class="one" border="1">
+        <tr>
+            <td>空白单元格是否显示属性</td>
+            <td>empty-cells: show;(默认)</td>
+        </tr>
+        <tr>
+            <td>右边的空白单元格显示了</td>
+            <td></td>
+        </tr>
+    </table>
+        
+    <br />
+        
+    <table class="two" border="1">
+        <tr>
+            <td>空白单元格是否显示属性</td>
+            <td>empty-cells: hide;(隐藏)</td>
+        </tr>
+        <tr>
+            <td>右边的空白单元格隐藏了</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

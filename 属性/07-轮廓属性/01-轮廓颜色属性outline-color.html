@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-轮廓颜色：outline-color</title>
+    <style>
+        /* 轮廓颜色：outline-color */
+        /* 作用： 设置轮廓的颜色*/
+        /* 取值：1:invert（默认）
+                2:十六进制值 - 如: ＃FF0000
+                3:一个RGB值 - 如: RGB(255,0,0)
+                4:颜色的名称 - 如: red
+        */
+        /* 注意点
+         *
+         */
+        div{
+            outline-style: dashed;
+        }
+        .one{
+            outline-color:invert;
+        }
+        .two{
+            outline-color:#FF0000;
+        }
+        .three{
+            outline-color:rgb(255,0,0);
+        }
+        .four{
+            outline-color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>轮廓颜色：outline-color</h3>
+    <div class="one">invert（默认）</div>
+    <br>
+    <div class="two">十六进制值 - 如: ＃FF0000</div>
+    <br>
+    <div class="three">一个RGB值 - 如: RGB(255,0,0)</div>
+    <br>
+    <div class="four">颜色的名称 - 如: red</div>
+</body>
+</html>

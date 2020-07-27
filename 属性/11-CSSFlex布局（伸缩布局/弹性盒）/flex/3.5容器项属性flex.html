@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex属性</title>
+    <!-- 1：作用：flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 -->
+
+    <!-- 2：取值： flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] -->
+
+    <!-- 3：该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
+
+        建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。 -->
+
+    <!-- 示例 -->
+
+    <!-- 示例 -->
+    <style>
+        .box:nth-child(1) li:nth-child(1){
+            flex-shrink: 1;
+        }.box:nth-child(1) li:nth-child(2){
+            flex-shrink: 2;
+        }
+        .box:nth-child(1) li:nth-child(3){
+            flex-shrink: 3;
+        }
+        .box:nth-child(2) li:nth-child(1){
+            flex-shrink: 3;
+        }.box:nth-child(2) li:nth-child(2){
+            flex-shrink: 2;
+        }
+        .box:nth-child(2) li:nth-child(3){
+            flex-shrink: 1;
+        }
+        .box:nth-child(3) li:nth-child(1){
+            flex-shrink: 3;
+        }.box:nth-child(3) li:nth-child(2){
+            flex-shrink: 1;
+        }
+        .box:nth-child(3) li:nth-child(3){
+            flex-shrink: 2;
+        }
+        .box{
+            border: 1px solid #000;
+            /* width: 450px; */
+            height: 200px;
+
+            display: flex;
+
+            padding: 0;
+        }
+        .box_item{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 12px;
+            background: red;
+
+            list-style: none;
+        }
+        .box_item:nth-of-type(2){
+            width: 30px;
+            background: green;
+        }
+        .box_item:nth-of-type(3){
+            width: 10px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+</body>
+</html>

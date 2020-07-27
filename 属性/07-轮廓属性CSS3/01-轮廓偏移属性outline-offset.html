@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-轮廓偏移：outline-offset</title>
+    <style>
+        /* 轮廓偏移：outline-offset */
+        /* 作用： 设置轮廓偏移的距离*/
+        /* 取值：1:invert（默认）
+                2:十六进制值 - 如: ＃FF0000
+                3:一个RGB值 - 如: RGB(255,0,0)
+                4:颜色的名称 - 如: red
+        */
+        /* 注意点
+         *      轮廓与边框有两点不同：
+         *  
+         *          轮廓不占用空间
+         *          轮廓可能是非矩形
+         */
+        div{
+            margin:20px;
+            width:300px; 
+            padding:10px;
+            /* height:70px; */
+            border:2px solid black;
+            outline:2px solid red;
+            outline-offset:15px;
+        } 
+    </style>
+</head>
+<body>
+
+    <p><b>注释：</b>Internet Explorer 和 Opera 不支持 support outline-offset 属性。</p>
+
+    <div>
+        <p>outline-offset:15px;</p>
+        <p>这个 div 在边框边缘之外 15 像素处有一个轮廓。</p>
+    </div>
+</body>
+</html>

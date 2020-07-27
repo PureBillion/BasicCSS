@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-文本颜色color</title>
+    <style>
+        /* 文本颜色属性color */
+
+        /* 取值：1:transparent（默认）
+                2:十六进制值 - 如: ＃FF0000
+                3:一个RGB值 - 如: RGB(255,0,0)
+                4:颜色的名称 - 如: red
+        */
+        body{
+            display: flex;
+        }
+       .box{
+           width: 200px;
+           height: 200px;
+           /* 没有设置背景色默认： transparent(透明)*/
+           color: #000;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           border: 1px solid #000;
+       }
+       .box2{
+           background-color: #f00;
+       }
+       .box3{
+           background-color: rgb(255,0,0);
+       }
+       .box4{
+           background-color: red;
+       }
+    </style>
+</head>
+<body>
+    <div class="box"> 没有设置背景色默认： transparent(透明)</div>
+    <div class="box box2">十六进制值 - 如: ＃FF0000</div>
+    <div class="box box3">一个RGB值 - 如: RGB(255,0,0)</div>
+    <div class="box box4">颜色的名称 - 如: red</div>
+</body>
+</html>

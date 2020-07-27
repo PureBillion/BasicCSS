@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-wrap属性</title>
+    <!-- 1作用：容器内的容器项换行方式 -->
+
+    <!-- 2：取值：flex-wrap: nowrap | wrap | wrap-reverse; -->
+    <!-- nowrap（默认）：-不换行。 -->
+    <!-- wrap：----------换行，第一行在上方。 -->
+    <!-- wrap-reverse：--换行，第一行在下方。 -->
+
+    <!-- 3：示例 -->
+    <style>
+        /* nowrap（默认）：不换行。如果伸缩容器的一行放不下所有的伸缩项, 那么系统会自动等比压缩所有的伸缩项*/
+        .box:nth-of-type(1){
+            flex-wrap: nowrap;
+        }
+        /* wrap：换行，第一行在上方。 */
+        .box:nth-of-type(2){
+            flex-wrap: wrap;
+        }
+        /* wrap-reverse：换行，第一行在下方。 */
+        .box:nth-of-type(3){
+            flex-wrap: wrap-reverse;
+        }
+        body{
+            display: flex;
+        }
+        .box{
+            border: 1px solid #000;
+            width: 350px;
+            height: 300px;
+
+            display: flex;
+
+            padding: 0;
+        }
+        .box_item{
+            width: 90px;
+            height: 70px;
+            background-color: red;
+
+            font-size: 12px;
+            line-height: 50px;
+            text-align: center;
+
+            list-style: none;
+        }
+        .box_item:nth-of-type(2){
+            background-color: green;
+        }
+        .box_item:nth-of-type(3){
+            background-color: blue;
+        }
+        .box_item:nth-of-type(4){
+            background-color: purple;
+        }
+        .box_item:nth-of-type(5){
+            background-color: pink;
+        }
+        .box_item:nth-of-type(6){
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+        <li class="box_item">nowrap</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+        <li class="box_item">wrap</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+        <li class="box_item">wrap-reverse</li>
+    </ul>
+</body>
+</html>

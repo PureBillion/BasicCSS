@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-表格标题位置：caption-side</title>
+    <style>
+        /* 表格标题位置：caption-side */
+        /* 取值：1:top(默认)
+                2:bottom;
+         */
+        table.one {
+            border-collapse: separate;
+            border-spacing: 10px
+        }
+        table.one caption{
+            /* caption-side: top;(默认) */
+            
+            color: #c00;
+        }
+        table.two{
+            border-collapse: separate;
+            border-spacing: 10px 50px
+        }
+        table.two caption{
+            caption-side: bottom;
+            color: #c00;
+        }
+    </style>
+</head>
+<body>
+    <table class="one" border="1">
+        <caption>This is a caption</caption>
+        <tr>
+            <td>表格标题位置属性</td>
+            <td>caption-side: top;(默认)</td>
+        </tr>
+        <tr>
+            <td>11111111111111</td>
+            <td>11111111111111</td>
+        </tr>
+    </table>
+        
+    <br />
+        
+    <table class="two" border="1">
+        <caption>This is a caption</caption>
+        <tr>
+            <td>表格标题位置属性</td>
+            <td>caption-side: bottom;</td>
+        </tr>
+        <tr>
+            <td>11111111111111</td>
+            <td>11111111111111</td>
+        </tr>
+    </table>
+</body>
+</html>

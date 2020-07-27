@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-表格布局：table-layout</title>
+    <style>
+        /* 表格布局：table-layout */
+        /* 作用：用来显示表格单元格、行、列的算法规则 */
+        /* 取值：1:automatic; (默认值。自动表格布局)
+                2:fixed;（固定表格布局）
+         */
+        table{
+            width: 30%;
+        }
+        table.one {
+            /* table-layout: automatic; */
+        }
+        table.two{
+            table-layout: fixed;
+        }
+    </style>
+</head>
+<body>
+    <table class="one" border="1">
+        <caption>自动表格布局</caption>
+        <tr>
+            <td width="20%">1000000000000000000000000000</td>
+            <td width="40%">10000000</td>
+            <td width="40%">100</td>
+        </tr>
+    </table>
+        
+    <br />
+        
+    <table class="two" border="1">
+        <caption>固定表格布局</caption>
+        <tr>
+            <td width="20%">1000000000000000000000000000</td>
+            <td width="40%">10000000</td>
+            <td width="40%">100</td>
+        </tr>
+    </table>
+</body>
+</html>

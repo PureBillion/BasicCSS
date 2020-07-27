@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-列表项图像属性list-style-image</title>
+    <style>
+        /* 列表项图像属性: list-style-image */
+        /*  取值：
+
+
+                参考链接：https://www.w3school.com.cn/tiy/t.asp?f=csse_list-style-image
+         */
+        body{
+            display: flex;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            /* 默认： background-image:none; */
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c00;
+        }
+        .box2{
+            background-image: url('https://upload.jianshu.io/users/upload_avatars/18699881/10c6d55c-adf0-4fb0-a60e-3253c618dd18.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/120/h/120');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">background-image:none;(默认)</div>
+    <div class="box box2">background-image:url('地址')</div>
+</body>
+</html>

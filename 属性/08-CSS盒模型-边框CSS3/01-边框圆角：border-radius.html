@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-边框圆角：border-radius</title>
+    <style>
+        /* 边框圆角：border-radius */
+        /* 作用： 设置边框的圆角值*/
+        /* 取值：1:0（默认）
+                2:length - 如: 具体的值 如20%
+                3:% - 如: 20%
+        */
+        /* 注意点
+         *      1：要设置边框以后，才能设置边框圆角。有边框才能有边框圆角
+         */
+        div{
+            border:2px solid;
+        }
+        .one{
+            /* border-radius:0; */
+        }
+        .two{
+            border-radius:2em;
+        }
+        .three{
+            
+            border-top-left-radius:2em;
+            border-top-right-radius:2em;
+            border-bottom-right-radius:2em;
+            border-bottom-left-radius:2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>轮廓颜色：outline-color</h3>
+    <div class="one">border-radius：0;（不设置边框圆角：默认边框圆角为0）</div>
+    <br>
+    <div class="two">border-radius:2em; - 如: 边框简写具体的数值</div>
+    <br>
+    <div class="three">
+        <p>border-top-left-radius:2em;</p>
+        <p>border-top-right-radius:2em;</p>
+        <p>border-bottom-right-radius:2em;</p>
+        <p> border-bottom-left-radius:2em;</p>
+        <p>单独设置边框圆角</p>
+    </div>
+    <br>
+</body>
+</html>

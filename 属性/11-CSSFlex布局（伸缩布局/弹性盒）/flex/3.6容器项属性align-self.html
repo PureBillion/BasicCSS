@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self属性</title>
+    <!-- 1：作用：属性容器项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 -->
+
+    <!-- 2：取值： align-self: auto | flex-start | flex-end | center | baseline | stretch; -->
+        
+    <!-- 3: 注意：align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。
+                默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。 -->
+
+    <!-- 示例 -->
+    <style>
+        .box:nth-child(1) li:nth-child(1){
+            align-self: flex-start;
+        }.box:nth-child(1) li:nth-child(2){
+            align-self: flex-end;
+        }
+        .box:nth-child(1) li:nth-child(3){
+            align-self: center;
+        }
+        .box:nth-child(2) li:nth-child(1){
+            align-self: flex-start;
+        }.box:nth-child(2) li:nth-child(2){
+            align-self: flex-end;
+        }
+        .box:nth-child(2) li:nth-child(3){
+            align-self: center;
+        }
+        .box:nth-child(3) li:nth-child(1){
+            align-self: flex-start;
+        }
+        .box:nth-child(3) li:nth-child(2){
+            align-self: flex-end;
+        }
+        .box:nth-child(3) li:nth-child(3){
+            align-self: center;
+        }
+        body{
+            display: flex;
+        }
+        .box{
+            border: 1px solid #000;
+            width: 450px;
+            height: 200px;
+
+            display: flex;
+
+            padding: 0;
+            align-items: flex-start;
+        }
+        .box:nth-child(2){
+            
+            align-items: flex-end;
+        }
+        .box:nth-child(3){
+           
+            align-items: center;
+        }
+        .box_item{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 12px;
+            background: red;
+
+            list-style: none;
+        }
+        .box_item:nth-of-type(2){
+            background: green;
+        }
+        .box_item:nth-of-type(3){
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+</body>
+</html>

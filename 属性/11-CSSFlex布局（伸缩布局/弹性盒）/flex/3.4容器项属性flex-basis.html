@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow属性</title>
+    <!-- 1：作用：属性容器项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 -->
+
+    <!-- 2：取值：flex-grow: <number>; /* default 0 */ -->
+
+    <!-- 3：默认为0，即如果存在剩余空间，也不放大。 -->
+    <!-- /*
+    在伸缩项中有一个flex-shrink属性, 用于控制当所有伸缩项的宽度总和大于伸缩容器宽度的时候如何缩小自己, 以便于所有伸缩项宽度的总和能够填满整个伸缩容器
+    默认情况下flex-shrink的取值是1, 表示当所有伸缩项宽度的总和大于伸缩容器宽度的时候等比缩小自己
+    注意点:
+    只有当所有伸缩项的宽度总和大于伸缩容器宽度的时候flex-shrink这个属性才有效
+
+
+    flex-shrink扩充的公式
+    1.利用所有伸缩项的宽度总和 - 伸缩容器宽度 = 溢出的宽度
+    900 - 600 = 300
+    2.计算权重值
+    利用每一个伸缩项需要的份数 * 当前伸缩项的宽度 然后再相加
+    1 * 300 + 4 * 300 + 8 * 300 = 3900
+    3.计算每个伸缩项需要缩小的范围
+    溢出的宽度 * 当前伸缩项的宽度 * 当前伸缩项需要的份数 / 权重值
+    300 * 300 * 1 / 3900 = 23.07
+    第一个伸缩项宽度 = 300 - 23.07 = 276.9
+    300 * 300 * 4 / 3900 = 92.3
+    第二个伸缩项宽度 = 300 - 92.3 = 207.6
+    */ -->
+
+    <!-- 示例 -->
+
+    <!-- 示例 -->
+    <style>
+        .box:nth-child(1) li:nth-child(1){
+            flex-shrink: 1;
+        }.box:nth-child(1) li:nth-child(2){
+            flex-shrink: 2;
+        }
+        .box:nth-child(1) li:nth-child(3){
+            flex-shrink: 3;
+        }
+        .box:nth-child(2) li:nth-child(1){
+            flex-shrink: 3;
+        }.box:nth-child(2) li:nth-child(2){
+            flex-shrink: 2;
+        }
+        .box:nth-child(2) li:nth-child(3){
+            flex-shrink: 1;
+        }
+        .box:nth-child(3) li:nth-child(1){
+            flex-shrink: 3;
+        }.box:nth-child(3) li:nth-child(2){
+            flex-shrink: 1;
+        }
+        .box:nth-child(3) li:nth-child(3){
+            flex-shrink: 2;
+        }
+        .box{
+            border: 1px solid #000;
+            /* width: 450px; */
+            height: 200px;
+
+            display: flex;
+
+            padding: 0;
+        }
+        .box_item{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 12px;
+            background: red;
+
+            list-style: none;
+        }
+        .box_item:nth-of-type(2){
+            width: 30px;
+            background: green;
+        }
+        .box_item:nth-of-type(3){
+            width: 10px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">1</li>
+        <li class="box_item">2</li>
+        <li class="box_item">3</li>
+    </ul>
+</body>
+</html>

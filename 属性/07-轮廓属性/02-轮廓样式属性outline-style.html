@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-轮廓样式：outline-style</title>
+    <style>
+        /* 轮廓样式：outline-style*/
+        /* 作用：设置轮廓样式 */
+        /*  取值：1：none（默认无轮廓）
+                2:dotted（点状的轮廓）
+                3:dashed（虚线的轮廓）
+                4:solid（实线的轮廓）
+                5:double（双线的轮廓）
+         */
+        /* 注意点
+         *      1：（仅用于“边框分离”模式）--> border-collapse: separate;
+         */
+        
+        div{
+            outline-color:#FF0000;
+        }
+        .one{
+            /* outline-style: none; */
+        }
+        .two{
+            outline-style: dotted;
+        }
+        .three{
+            outline-style: dashed;
+        }
+        .four{
+            outline-style: solid;
+        }
+        .five{
+            outline-style: double;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>轮廓轮廓：outline-style</h3>
+    <div class="one">none（默认无轮廓）</div>
+    <br>
+    <div class="two">dotted（点状的轮廓）</div>
+    <br>
+    <div class="three">dashed（虚线的轮廓）</div>
+    <br>
+    <div class="four">solid（实线的轮廓）</div>
+    <br>
+    <div class="five">double（双线的轮廓）</div>
+</body>
+</html>

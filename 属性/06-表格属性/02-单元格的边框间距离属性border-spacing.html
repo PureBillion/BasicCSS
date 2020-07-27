@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-单元格的边框间距离：border-spacing</title>
+    <style>
+        /* 表格单元格的边框间距离：border-spacing */
+        /* 作用：设置相邻单元格的边框间的距离 */
+        /*  取值：1：not specified（默认）
+                2:length length（左边水平间距，右边垂直间距）
+         */
+        /* 注意点
+         *      1：（仅用于“边框分离”模式）--> border-collapse: separate;
+         */
+        table.one {
+            border-collapse: separate;
+            border-spacing: 10px
+        }
+        table.two{
+            border-collapse: separate;
+            border-spacing: 10px 50px
+        }
+    </style>
+</head>
+<body>
+    <table class="one" border="1">
+        <tr>
+            <td>默认单元格间距</td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <td>Adams</td>
+            <td>George</td>
+        </tr>
+    </table>
+        
+    <br />
+        
+    <table class="two" border="1">
+        <tr>
+            <td>设置后单元格间距</td>
+            <td>Thomas</td>
+        </tr>
+        <tr>
+            <td>单元格水平间距10px</td>
+            <td>单元格垂直间距10px</td>
+        </tr>
+    </table>
+</body>
+</html>

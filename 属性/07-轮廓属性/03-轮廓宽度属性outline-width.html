@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-轮廓宽度：outline-width</title>
+    <style>
+        /* 轮廓宽度：outline-width */
+        /* 取值：1:medium(默认中等轮廓)
+                2:thin;（细轮廓）
+                3：thick;（粗轮廓）
+                4：length(自定义轮廓粗细)
+         */
+        div{
+            outline-color:#FF0000;
+            outline-style: dashed;
+        }
+        .one{
+            /* outline-width: none; */
+        }
+        .two{
+            outline-width: thin;
+        }
+        .three{
+            outline-width: thick;
+        }
+        .four{
+            outline-width: 10px;
+        }
+        .five{
+            outline-width: double;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>轮廓轮廓：outline-width</h3>
+    <div class="one">medium（默认中等轮廓）</div>
+    <br>
+    <br>
+    <div class="two">thin（细轮廓）</div>
+    <br>
+    <br>
+    <div class="three">thick（粗轮廓）</div>
+    <br>
+    <br>
+    <div class="four">length(自定义轮廓粗细)</div>
+    <br>
+    <br>
+    <div class="five">double（双线的轮廓）</div>
+</body>
+</html>

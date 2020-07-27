@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>24-CSS三大特性之继承性</title>
+    <style>
+        div {
+            color: red;
+            text-decoration: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+1.什么是继承性?
+作用: 给父元素设置一些属性, 子元素也可以使用, 这个我们就称之为继承性
+
+注意点:
+1.并不是所有的属性都可以继承, 只有以color/font-/text-/line-开头的属性才可以继承
+2.在CSS的继承中不仅仅是儿子可以继承, 只要是后代都可以继承
+3.继承性中的特殊性
+3.1a标签的文字颜色和下划线是不能继承的
+3.2h标签的文字大小是不能继承的
+
+应用场景:
+一般用于设置网页上的一些共性信息, 例如网页的文字颜色, 字体,文字大小等内容
+body{}
+
+有继承性的属性：
+    1、字体系列属性
+
+        font：组合字体
+
+        font-family：规定元素的字体系列
+
+        font-weight：设置字体的粗细
+
+        font-size：设置字体的尺寸
+
+        font-style：定义字体的风格
+
+        font-variant：设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为
+
+        大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小。
+
+        font-stretch：允许你使文字变宽或变窄。所有主流浏览器都不支持。
+
+        font-size-adjust：为某个元素规定一个 aspect 值，字体的小写字母 "x" 的高度与
+
+        "font-size" 高度之间的比率被称为一个字体的 aspect 值。这
+
+        样就可以保持首选字体的 x-height。
+
+    2、文本系列属性
+
+        text-indent：文本缩进
+
+        text-align：文本水平对齐
+
+        line-height：行高
+
+        word-spacing：增加或减少单词间的空白（即字间隔）
+
+        letter-spacing：增加或减少字符间的空白（字符间距）
+
+        text-transform：控制文本大小写
+
+        direction：规定文本的书写方向
+
+        color：文本颜色
+
+    3、元素可见性：visibility
+
+    4、表格布局属性：caption-side、border-collapse、border-spacing、
+
+    empty-cells、table-layout
+
+    5、列表属性：list-style-type、list-style-image、list-style-position、list-style
+
+    6、生成内容属性：quotes
+
+    7、光标属性：cursor
+
+    8、页面样式属性：page、page-break-inside、windows、orphans
+
+    9、声音样式属性：speak、speak-punctuation、speak-numeral、speak-header、
+
+    speech-rate、volume、voice-family、pitch、pitch-range、
+
+    stress、richness、、azimuth、elevation
+
+所有元素可以继承的属性：
+1、元素可见性：visibility、opacity        2、光标属性：cursor
+
+内联元素可以继承的属性:
+1、字体系列属性        2、除text-indent、text-align之外的文本系列属性
+
+块级元素可以继承的属性:
+1、text-indent、text-align
+
+无继承的属性
+        1、display
+
+        2、文本属性：vertical-align：
+
+        text-decoration：
+
+        text-shadow：
+
+        white-space：
+
+        unicode-bidi：
+
+        3、盒子模型的属性:宽度、高度、内外边距、边框等
+
+        4、背景属性：背景图片、颜色、位置等
+
+        5、定位属性：浮动、清除浮动、定位position等
+
+        6、生成内容属性:content、counter-reset、counter-increment
+
+        7、轮廓样式属性:outline-style、outline-width、outline-color、outline
+
+        8、页面样式属性:size、page-break-before、page-break-after
+
+继承中比较特殊的几点
+
+1、a 标签的字体颜色不能被继承
+
+1、h1-h6标签字体的大下也是不能被继承的
+
+因为它们都有一个默认值
+-->
+
+    <div>
+        <p>我是段落</p>
+    </div>
+
+    <div>
+        <ul>
+            <li>
+                <p>我是段落</p>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <a href="#">我是超链接</a>
+    </div>
+
+    <div>
+        <h1>我是大标题</h1>
+    </div>
+</body>
+
+</html>

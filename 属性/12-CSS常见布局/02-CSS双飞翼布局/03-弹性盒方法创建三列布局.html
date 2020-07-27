@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子创建三列布局</title>
+    <style>
+        .box1 {
+            width: 500px;
+            background: #EEEEEE;
+        }
+
+        .box1 ul {
+            clear: both;
+            overflow: hidden;
+        }
+
+        .box1 ul li {
+            width: 48%;
+            height: 100px;
+            margin-bottom: 10px;
+            background: skyblue;
+            float: left;
+        }
+
+        .box1 ul li:nth-child(even) {
+            margin-left: 4%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        box1:实现两列多行布局
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-折叠边框属性border-collapse</title>
+    <style>
+        /* 折叠边框属性border-collapse */
+        /* 作用： */
+        /* 取值：1:transparent（默认）
+                2:十六进制值 - 如: ＃FF0000
+                3:一个RGB值 - 如: RGB(255,0,0)
+                4:颜色的名称 - 如: red
+        */
+        table{
+            border-collapse:separate;
+        }
+        
+        .table2{
+            border-collapse:collapse;
+        }
+        table, td, th{
+            border:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>border-collapse:separate;</h3>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>Bill</td>
+            <td>Gates</td>
+        </tr>
+        <tr>
+            <td>Steven</td>
+            <td>Jobs</td>
+        </tr>
+    </table>
+    <br>
+    <h3>border-collapse:collapse;</h3>
+    <table class="table2">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>Bill</td>
+            <td>Gates</td>
+        </tr>
+        <tr>
+            <td>Steven</td>
+            <td>Jobs</td>
+        </tr>
+    </table>
+</body>
+</html>

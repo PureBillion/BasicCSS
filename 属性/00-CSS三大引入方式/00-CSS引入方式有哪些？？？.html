@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>24-CSS三大特性之继承性</title>
+    <link rel="stylesheet" href="three.CSS" type="text/css">
+    <style>
+        /* 下面讲从2个角度来说明CSS书写格式*/
+        /* 1：CSS有哪些书写格式？ */
+        /* 2：CSS书写格式示例在？？？ */
+
+
+        /* 1.CSS书写格式有哪些？
+            1.行内样式（内嵌样式）: 写在标签内部
+            2.内部样式(内链/联样式) : 写在一对head标签中
+            3.外部样式（外链样式）: 写在一个单独的.css文件中, 再导入进来 
+            4:@import
+        */
+
+        /* 2：CSS书写格式示例在？？？ */
+        .two {
+            color: teal;
+        }
+
+        @import url('four.css');
+    </style>
+</head>
+
+<body>
+    <div style="color: yellow;">行内样式: 写在标签内部</div>
+    <div class="two">内嵌样式(内联样式) : 写在一对head标签中</div>
+    <div class="three">外链样式: 写在一个单独的.css文件中, 再导入进来</div>
+    <div class="four">@import: 写在一个单独的.css文件中, 再导入进来</div>
+</body>
+
+</html>

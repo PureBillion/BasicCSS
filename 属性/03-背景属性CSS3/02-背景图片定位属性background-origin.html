@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-文本对齐方式属性text-align</title>
+    <style>
+        /* 文本对齐方式属性text-align< */
+        /*  取值：1:left(默认)
+                2:center（斜体）
+                3:right
+                4:justify:当text-align设置为"justify"，每一行被展开为宽度相等，左，右外边距是对齐（如杂志和报纸）。
+         */
+        body{
+            display: flex;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 10px dotted yellow;
+            margin: 0 auto;
+            /* 默认 */
+            background-image: url('../images/pig.jpg');
+            background-size: 50px;
+            background-repeat: no-repeat;
+            padding: 50px;
+        }
+        .box2{
+            background-origin: border-box;
+        }
+        .box3{
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">background-origin: padding-box;(默认)</div>
+    <div class="box box2">background-origin: border-box;（相对border开始）</div>
+    <div class="box box3">background-origin: content-box;（相对content开始）</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items属性</title>
+    <!-- 1作用：定义了项目在主轴上的对齐方式。 -->
+
+    <!-- 2：取值：justify-content: flex-start | flex-end | center | space-between | space-around; -->
+
+    <!-- 3：示例 -->
+    <style>
+        .box:nth-child(1){
+            align-items: flex-start;
+        }
+        .box:nth-child(2){
+            align-items: flex-end;
+        }
+        .box:nth-child(3){
+            align-items: center;
+        }
+        /*baseline: 让所有伸缩项中的基线在一条直线上对齐*/
+            /* 伸缩项的第一行文字在一条直线对齐 */
+        .box:nth-child(4){
+            align-items: baseline;
+        }
+        /*
+            stretch(拉伸对齐/等高对齐):
+            让所有的伸缩项的高度变为侧轴的高度
+            注意点:
+            如果需要设置为拉伸对齐, 那么伸缩项不能设置高度
+            如果伸缩项设置了高度, 那么拉伸对齐就会失效
+        */
+        .box:nth-child(5){
+            align-items: stretch;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            border: 1px solid #000;
+            width: 350px;
+            height: 200px;
+
+            display: flex;
+
+            padding: 0;
+        }
+        .box_item{
+            width: 50px;
+            /*height: 100px;*/
+            line-height: 50px;
+            text-align: center;
+            font-size: 12px;
+            background: red;
+
+            list-style: none;
+        }
+        .box_item:nth-of-type(2){
+            padding-top: 100px;
+            background: green;
+        }
+        .box_item:nth-of-type(3){
+            background: blue;
+        }
+        .box2 .box_item{
+            width: 90px;
+            height: 70px;
+
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li class="box_item">flex-start</li>
+        <li class="box_item">flex-start</li>
+        <li class="box_item">flex-start</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">flex-end</li>
+        <li class="box_item">flex-end</li>
+        <li class="box_item">flex-end</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">center</li>
+        <li class="box_item">center</li>
+        <li class="box_item">center</li>
+    </ul>
+    <ul class="box">
+        <li class="box_item">baseline</li>
+        <li class="box_item">baseline</li>
+        <li class="box_item">baseline</li>
+        
+    </ul>
+    <ul class="box box2">
+        <li class="box_item">伸缩项stretch</li>
+        <li class="box_item">设置高度stretch</li>
+        <li class="box_item">拉伸失效stretch</li>
+    </ul>
+    
+    <ul class="box">
+        <li class="box_item">stretch</li>
+        <li class="box_item">stretch</li>
+        <li class="box_item">stretch</li>
+    </ul>
+</body>
+</html>
